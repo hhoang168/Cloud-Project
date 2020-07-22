@@ -43,8 +43,8 @@ public class SendMailSSL {
         try {
             MimeMessage message = new MimeMessage(session);
             message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(email));
-            message.setSubject("Bạn đã trúng giải đặc biệt","utf-8");
-            message.setText("Code của mày nè thằng chó: " + code,"utf-8");
+            message.setSubject("Verify email","utf-8");
+            message.setText("Your code to verify: " + code,"utf-8");
 
             // send message
             Transport.send(message);
